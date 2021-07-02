@@ -8,12 +8,13 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "BBQ Form",
-      filename: "src/index.html",
+      template: "src/index.html",
     }),
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    clean: true,
   },
   devServer: {
     contentBase: "./dist",
